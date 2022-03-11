@@ -5,6 +5,7 @@ let pokemonList = [
     { name: "Charizard", types: [ "Fire", "Flying" ], height: 7, hp: 78, attack: 84, defense: 78 },
 ];
 
+// iterate over pokemonList and print out the name & height of each pokemon
 for (let i = 0; i < pokemonList.length; i++) {
     if (pokemonList[i].height > 6) {
         document.write(`<p>${pokemonList[i].name} (height: ${pokemonList[i].height}) - Wow, that's a tall Pokemon.</p>`);

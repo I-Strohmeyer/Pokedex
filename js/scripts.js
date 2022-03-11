@@ -6,10 +6,10 @@ let pokemonList = [
 ];
 
 for (let i = 0; i < pokemonList.length; i++) {
-    if (pokemonList[i].height > 3) {
-        document.write(`<p>${pokemonList[i].name} is tall.</p>`);
+    if (pokemonList[i].height > 6) {
+        document.write(`<p>${pokemonList[i].name} (height: ${pokemonList[i].height}) - Wow, that's a tall Pokemon.</p>`);
     } else {
-        document.write(`<p>${pokemonList[i].name} is not tall.</p>`);
+        document.write(`<p>${pokemonList[i].name} (height: ${pokemonList[i].height})</p>`);
     }
 
 }

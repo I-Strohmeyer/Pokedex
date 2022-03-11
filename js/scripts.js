@@ -1,6 +1,15 @@
 let pokemonList = [
-    { name: "Scyther", types: [ "Bug", "Flying" ], height: 3, hp: 45, attack: 49, defense: 49 },
+    { name: "Scyther", types: [ "Bug", "Flying" ], height: 5, hp: 45, attack: 49, defense: 49 },
     { name: "Jigglypuff", types: [ "Fairy", "Normal" ], height: 3, hp: 60, attack: 62, defense: 63 },
-    { name: "Dragonite", types: [ "Dragon", "Flying" ], height: 3, hp: 80, attack: 82, defense: 83 },
-    { name: "Charizard", types: [ "Fire", "Flying" ], height: 3, hp: 78, attack: 84, defense: 78 },
+    { name: "Dragonite", types: [ "Dragon", "Flying" ], height: 6, hp: 80, attack: 82, defense: 83 },
+    { name: "Charizard", types: [ "Fire", "Flying" ], height: 7, hp: 78, attack: 84, defense: 78 },
 ];
+
+for (let i = 0; i < pokemonList.length; i++) {
+    if (pokemonList[i].height > 3) {
+        document.write(`<p>${pokemonList[i].name} is tall.</p>`);
+    } else {
+        document.write(`<p>${pokemonList[i].name} is not tall.</p>`);
+    }
+
+}

@@ -2,72 +2,164 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
     2. Remove default margin
   */
-  * {
-    margin: 0;
-  }
-  /*
+* {
+  margin: 0;
+}
+/*
     3. Allow percentage-based heights in the application
   */
-  html, body {
-    height: 100%;
-  }
-  /*
+html,
+body {
+  height: 100%;
+}
+/*
     Typographic tweaks!
     4. Add accessible line-height
     5. Improve text rendering
   */
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  /*
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
     6. Improve media defaults
   */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
     7. Remove built-in form typography styles
   */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
     8. Avoid text overflows
   */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  /*
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
     9. Create a root stacking context
   */
-  #root, #__next {
-    isolation: isolate;
-  }
+#root,
+#__next {
+  isolation: isolate;
+}
 
-  /* Styles */
+/* Styles */
 
-  body {
-    font-family: 'Nunito', sans-serif;
-    padding: 20px;
-  }
+:root {
+  --shadow-color: 0deg 0% 46%;
+  --shadow-color-2: 0deg 73% 41%;
+}
 
-  header {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-bottom: 100px;
-  }
+body {
+  font-family: "Nunito", sans-serif;
+  padding: 20px;
+  background: #fafafa;
+}
 
-  header img {
-      height: 60px;
-      width: auto;
-      margin-right: 20px;
-  }
+main {
+  padding: 40px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+header img {
+  height: 60px;
+  width: auto;
+  margin-right: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.pokemon-list-wrapper {
+  background: white;
+  width: 400px;
+  margin-right: 40px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow:  
+  0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+  0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+  2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+  5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+}
+
+#pokemon-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.pokemon-detail-wrapper {
+  background: #ff5b5b;
+  color: white;
+  min-height: 400px;
+  flex-grow: 1;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 
+  0.3px 0.5px 0.7px hsl(var(--shadow-color-2) / 0.36),
+  0.8px 1.6px 2px -0.8px hsl(var(--shadow-color-2) / 0.36),
+  2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color-2) / 0.36),
+  5px 10px 12.6px -2.5px hsl(var(--shadow-color-2) / 0.36);;
+}
+
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 100px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #e6e6e6;
+  background: white;
+  font-weight: 700;
+  cursor: pointer;
+}

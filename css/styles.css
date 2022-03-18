@@ -123,11 +123,10 @@ input {
   margin-right: 40px;
   padding: 20px;
   border-radius: 12px;
-  box-shadow:  
-  0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
-  0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
-  2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
-  5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+  box-shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
 }
 
 #pokemon-list {
@@ -140,14 +139,14 @@ input {
   background: #ff5b5b;
   color: white;
   min-height: 400px;
+  max-height: 800px;
   flex-grow: 1;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 
-  0.3px 0.5px 0.7px hsl(var(--shadow-color-2) / 0.36),
-  0.8px 1.6px 2px -0.8px hsl(var(--shadow-color-2) / 0.36),
-  2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color-2) / 0.36),
-  5px 10px 12.6px -2.5px hsl(var(--shadow-color-2) / 0.36);;
+  box-shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color-2) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color-2) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color-2) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color-2) / 0.36);
 }
 
 .pokemon-card {
@@ -162,4 +161,17 @@ input {
   background: white;
   font-weight: 700;
   cursor: pointer;
+}
+
+.pokemon-card:hover {
+  background: #ff5b5b;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.pokemon-card:active,
+.pokemon-card:focus {
+  outline: none;
+  background: #c43535;
+  color: #fff;
 }

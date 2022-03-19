@@ -120,6 +120,8 @@ input {
 .pokemon-list-wrapper {
   background: white;
   width: 400px;
+  max-height: 800px;
+  overflow: auto;
   margin-right: 40px;
   padding: 20px;
   border-radius: 12px;
@@ -164,14 +166,13 @@ input {
 }
 
 .pokemon-card:hover {
-  background: #ff5b5b;
-  color: white;
-  transition: all 0.2s ease-in-out;
+  background: rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease-in-out;
 }
 
 .pokemon-card:active,
 .pokemon-card:focus {
-  outline: none;
+  border: none;
   background: #c43535;
   color: #fff;
 }

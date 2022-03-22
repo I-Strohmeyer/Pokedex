@@ -25,8 +25,26 @@
         <input id="search" placeholder="Search by name" type="text" />
         <div id="pokemon-list"></div>
       </section>
+
       <section class="pokemon-detail-wrapper">
         <h2>Details</h2>
+        <div id="pokemon-detail">
+          <h3 id="detail-title">Unknown Pokemon</h3>
+          <p>Select a pokemon from the list to see its details.</p>
+          <img src="" alt="" id="detail-img" />
+          <p id="detail-height"></p>
+        </div>
+      </section>
+
+      <section id="modal">
+        <div id="modal-content">
+          <h3 id="modal-title">Unknown Pokemon</h3>
+          <button id="close">&times;</button>
+          <img id="modal-img" src="" alt="" />
+          <p id="modal-height">
+            Select a pokemon from the list to see its details.
+          </p>
+        </div>
       </section>
     </main>
 

@@ -84,19 +84,19 @@ body {
 
 main {
   padding: 40px;
-  border-radius: 12px;
-  display: flex;
+  /* border-radius: 12px; 
+  display: flex; */
   flex-direction: row;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-header {
+/*header {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 100px;
-}
+} */
 
 header img {
   height: 60px;
@@ -110,7 +110,7 @@ h2 {
 
 input {
   border: 1px solid #ccc;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   padding: 10px;
   font-size: 16px;
   width: 100%;
@@ -124,7 +124,7 @@ input {
   overflow: auto;
   margin-right: 40px;
   padding: 20px;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   box-shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
     0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
     2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
@@ -143,18 +143,18 @@ input {
   align-content: center;
   justify-content: center;
   height: 100px;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   margin-bottom: 12px;
-  border: 1px solid #e6e6e6;
+  /*border: 1px solid #e6e6e6; */
   background: white;
   font-weight: 700;
   cursor: pointer;
 }
 
-.pokemon-card:hover {
+/*.pokemon-card:hover {
   background: rgba(0, 0, 0, 0.03);
   transition: all 0.3s ease-in-out;
-}
+} */
 
 .pokemon-card:active,
 .pokemon-card:focus {
@@ -169,7 +169,7 @@ input {
   min-height: 400px;
   max-height: 800px;
   flex-grow: 1;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   padding: 20px;
   box-shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color-2) / 0.36),
     0.8px 1.6px 2px -0.8px hsl(var(--shadow-color-2) / 0.36),
@@ -189,9 +189,18 @@ input {
   margin: 20px 0;
 }
 
+#detail-height,
+#detail-weight {
+  font-size: 20px;
+  width: fit-content + 20px;
+  display: inline-block;
+  padding: 20px;
+  margin-right: 12px;
+}
+
 /* Modal Styles */
-#modal {
-  display: none; /* Should be hiiden by default */
+/*#modal {
+  display: none; Should be hiiden by default 
   position: fixed;
   z-index: 100;
   left: 0;
@@ -200,7 +209,7 @@ input {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.75);
-}
+} */
 
 /* Modal Content/Box */
 #modal-content {

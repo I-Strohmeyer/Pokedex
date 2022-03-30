@@ -31,6 +31,7 @@ let pokemonRepository = (function () {
     pokemonList.push(item);
   }
 
+  // Creates buttons to show the list of pokemon
   function addListItem(pokemon) {
     let listOfPokemon = document.getElementById("pokemon-list");
     let pokemonCard = document.createElement("button");

@@ -37,13 +37,7 @@ let pokemonRepository = (function () {
     let pokemonCard = document.createElement("button");
     let isMobile;
 
-    pokemonCard.classList.add(
-      "pokemon-card",
-      "rounded",
-      "btn",
-      "btn-outline-secondary",
-      "border-dark"
-    );
+    pokemonCard.classList.add("pokemon-card");
 
     // capitalize first letter of pokemon name
     pokemonCard.innerText = `${pokemon.name[0].toUpperCase()}${pokemon.name
@@ -68,21 +62,21 @@ let pokemonRepository = (function () {
     pokemonCard.addEventListener("click", function () {
       if (isMobile) {
         // if mobile, show modal
-        //showModal(pokemon);
-        pokemonCard.setAttribute("data-toggle", "modal");
-        pokemonCard.setAttribute("data-target", "#modal");
-        showBootstrapModal(pokemon);
+        showModal(pokemon);
+        //pokemonCard.setAttribute("data-toggle", "modal");
+        //pokemonCard.setAttribute("data-target", "#modal");
+        //showBootstrapModal(pokemon);
       } else {
         // if desktop, show details
-        pokemonCard.removeAttribute("data-toggle");
-        pokemonCard.removeAttribute("data-target");
+        //pokemonCard.removeAttribute("data-toggle");
+        //pokemonCard.removeAttribute("data-target");
         showDetails(pokemon);
       }
     });
   }
 
   // Show and hide bootstrap modal
-  function showBootstrapModal(pokemon) {
+  /*function showBootstrapModal(pokemon) {
     let modal = $("#modal");
     modal.modal("show");
     console.log("show modal");
@@ -121,7 +115,7 @@ let pokemonRepository = (function () {
         modal.style.display = "none";
       }
     });
-  }
+  } */
 
   // Generate details to consume
   async function loadDetails(item) {
@@ -162,12 +156,13 @@ let pokemonRepository = (function () {
   }
 
   // Modal for smaller screens if pokemon is clicked
-  /*function showModal(pokemon) {
+  function showModal(pokemon) {
     // Closes modal if close button is clicked
     let close = document.getElementById("close");
     let modal = document.getElementById("modal");
     let title = document.getElementById("modal-title");
     let height = document.getElementById("modal-height");
+    let weight = document.getElementById("modal-weight");
     let img = document.getElementById("modal-img");
 
     modal.style.display = "block";
@@ -175,7 +170,8 @@ let pokemonRepository = (function () {
     loadDetails(pokemon).then(function () {
       console.log(pokemon);
       console.log("Modal stuff");
-      height.innerText = `Height: ${pokemon.height}`;
+      height.innerText = `Height: ${pokemon.height * 10} cm`;
+      weight.innerText = `Weight: ${pokemon.weight / 10} kg`;
       img.src = pokemon.imageUrl;
       img.alt = `Image of ${pokemon.name}`;
       title.innerText = `${pokemon.name[0].toUpperCase()}${pokemon.name
@@ -198,7 +194,7 @@ let pokemonRepository = (function () {
         modal.style.display = "none";
       }
     });
-  } */
+  }
 
   return {
     loadList: loadList,

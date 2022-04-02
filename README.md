@@ -8,8 +8,8 @@ Depending on what screen size you are on, the information will be displayed in a
 
 ## To-Dos
 
-- [ ] Remove Bootstrap/Jquery from project
-- [ ] Finish custom design :tada:
+- [x] Remove Bootstrap/Jquery from project
+- [x] Finish custom design :tada:
 
 ## Languages
 

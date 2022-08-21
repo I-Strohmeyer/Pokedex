@@ -6,11 +6,6 @@ If you click on a Pokemon it will show you it's stats.
 
 Depending on what screen size you are on, the information will be displayed in a modal or on the page itself.
 
-## To-Dos
-
-- [x] Remove Bootstrap/Jquery from project
-- [x] Finish custom design :tada:
-
 ## Languages
 
 - HTML
